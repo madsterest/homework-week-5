@@ -26,86 +26,55 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p id="current-day" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-      <!-- <table class="table time-block">
-        <tbody>
-          <tr>
-            <td class="hour">Mark</td>
-            <td><textarea class="future"></textarea></td>
-            <td>
-              <button type="button" class="btn btn-primary btn-block saveBtn">
-                Primary
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td class="hour">Jacob</td>
-            <td><textarea class="future"></textarea></td>
-            <td>
-              <button type="button" class="btn btn-primary btn-block saveBtn">
-                Primary
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td class="hour">Larry</td>
-            <td><textarea class="future"></textarea></td>
-            <td>
-              <button type="button" class="btn btn-primary btn-block saveBtn">
-                Primary
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table> -->
+    <div class="container time-block">
       <div class="row">
-        <div class="col hour">9</div>
-        <textarea class="col-6 future"></textarea>
-        <button class="col saveBtn" data-btn="2"></button>
+        <div class="col hour" data-time="09">9</div>
+        <textarea id="text-one" class="col-6"></textarea>
+        <button class="col saveBtn" id="one">Save</button>
       </div>
       <div class="row">
-        <div class="col hour">10</div>
-        <textarea class="col-6 future"></textarea>
-        <button class="col saveBtn" data-btn="2"></button>
+        <div class="col hour" data-time="10">10</div>
+        <textarea id="text-two" class="col-6"></textarea>
+        <button class="col saveBtn" id="two">Save</button>
       </div>
       <div class="row">
-        <div class="col hour">11</div>
-        <textarea class="col-6 future"></textarea>
-        <button class="col saveBtn" data-btn="3"></button>
+        <div class="col hour" data-time="11">11</div>
+        <textarea id="text-three" class="col-6"></textarea>
+        <button class="col saveBtn" id="three">Save</button>
       </div>
       <div class="row">
-        <div class="col hour">12</div>
-        <textarea class="col-6 future" data-btn="4"></textarea>
-        <button class="col saveBtn"></button>
+        <div class="col hour" data-time="12">12</div>
+        <textarea id="text-four" class="col-6"></textarea>
+        <button class="col saveBtn" id="four">Save</button>
       </div>
       <div class="row">
-        <div class="col hour">1</div>
-        <textarea class="col-6 future "></textarea>
-        <button class="col saveBtn" data-btn="5"></button>
+        <div class="col hour" data-time="13">1</div>
+        <textarea id="text-five" class="col-6"></textarea>
+        <button class="col saveBtn" id="five">Save</button>
       </div>
       <div class="row">
-        <div class="col hour">2</div>
-        <textarea class="col-6 future"></textarea>
-        <button class="col saveBtn" data-btn="6"></button>
+        <div class="col hour" data-time="14">2</div>
+        <textarea id="text-six" class="col-6"></textarea>
+        <button class="col saveBtn" id="six">Save</button>
       </div>
       <div class="row">
-        <div class="col hour">3</div>
-        <textarea class="col-6 future"></textarea>
-        <button class="col saveBtn" data-btn="7"></button>
+        <div class="col hour" data-time="15">3</div>
+        <textarea id="text-seven" class="col-6"></textarea>
+        <button class="col saveBtn" id="seven">Save</button>
       </div>
       <div class="row">
-        <div class="col hour">4</div>
-        <textarea  class="col-6 future"></textarea>
-        <button class="col saveBtn" data-btn="8"></button>
+        <div class="col hour" data-time="16">4</div>
+        <textarea id="text-eight" class="col-6"></textarea>
+        <button class="col saveBtn" id="eight">Save</button>
       </div>
       <div class="row">
-        <div class="col hour">5</div>
-        <textarea class="col-6 future"></textarea>
-        <button class="col saveBtn" data-btn="9"></button>
+        <div class="col hour" data-time="17">5</div>
+        <textarea id="text-nine" class="col-6"></textarea>
+        <button class="col saveBtn" id="nine">Save</button>
       </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
