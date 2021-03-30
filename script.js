@@ -1,11 +1,27 @@
 var hours = document.querySelectorAll(".hour");
 var dayDisplay = document.getElementById("current-day");
 var body = document.querySelector(".container");
+var activities = [];
 
 function init() {
-  var currentTime = moment().format("dddd, MMMM Do");
-  dayDisplay.innerHTML = currentTime;
+  time();
+  display();
+  addItems();
+}
 
+function time() {
+  var currentTime = moment().format("dddd, MMMM Do");
+  console.log(currentTime);
+  dayDisplay.innerHTML = currentTime;
+  var savedTime = JSON.parse(localStorage.getItem("day"));
+  console.log(savedTime);
+  if (savedTime !== currentTime) {
+    activities = [];
+    localStorage.removeItem("activities");
+  }
+  localStorage.setItem("day", JSON.stringify(currentTime));
+}
+function display() {
   var currentTimeLarge = moment().format("HH");
   var textArea = document.querySelectorAll("textarea");
 
@@ -24,7 +40,6 @@ function init() {
     }
   }
 }
-
 body.addEventListener("click", function (event) {
   var target = event.target;
   if (target.nodeName === "BUTTON") {
@@ -34,8 +49,30 @@ body.addEventListener("click", function (event) {
     if (text === "") {
       return;
     } else {
-      console.log(text);
+      var currentActivity = {
+        idNo: textID,
+        content: text,
+      };
+      var items = JSON.parse(localStorage.getItem("schedule"));
+      if (items === null) {
+        activities.push(currentActivity);
+        localStorage.setItem("schedule", JSON.stringify(activities));
+      } else if (items !== null) {
+        items.push(currentActivity);
+        localStorage.setItem("schedule", JSON.stringify(items));
+      }
     }
   }
 });
+
+function addItems() {
+  var items = JSON.parse(localStorage.getItem("schedule"));
+  if (items !== null) {
+    for (var i = 0; i < items.length; i++) {
+      var itemId = items[i].idNo;
+      var itemContent = items[i].content;
+      document.getElementById(itemId).value = itemContent;
+    }
+  }
+}
 init();
