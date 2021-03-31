@@ -13,7 +13,9 @@ function time() {
   var currentTime = moment().format("dddd, MMMM Do");
   dayDisplay.innerHTML = currentTime;
   var savedTime = JSON.parse(localStorage.getItem("day"));
-  if (savedTime !== currentTime) {
+  if (savedTime === null) {
+    localStorage.setItem("day", JSON.stringify(currentTime));
+  } else if (savedTime !== currentTime) {
     activities = [];
     localStorage.removeItem("schedule");
     localStorage.setItem("day", JSON.stringify(currentTime));
