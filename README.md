@@ -5,7 +5,7 @@ This program allows you to organise your work day and keep track of your tasks. 
 URL:
 https://madsterest.github.io/interactive-daily-planner/
 
-![Daily Planner](./daily-planner-screenshot.png)
+![Daily Planner](./daily-planner-screenshot-updated.png)
 
 
 
