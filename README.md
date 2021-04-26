@@ -11,7 +11,18 @@ URL:
 https://madsterest.github.io/interactive-daily-planner/
 
 ![Daily Planner](./assets/daily-planner-screenshot-updated.png)
+
+
+
+
+
 ![Coloured Tasks](./assets/coloured-tasks.png)
+
+
+
+
+
+
 ![Local Storage](./assets/local-storage.png)
 
 
