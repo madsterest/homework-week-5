@@ -25,7 +25,8 @@ https://madsterest.github.io/interactive-daily-planner/
 
 ![Local Storage](./assets/local-storage.png)
 
-
+Contact me for any questions or concerns:
+Email: odea.madeleine@gmail.com
 
 
 
